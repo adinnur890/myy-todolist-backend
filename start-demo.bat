@@ -1,0 +1,6 @@
+@echo off
+echo Starting Laravel Server...
+start cmd /k "cd /d %~dp0 && php artisan serve"
+timeout /t 3
+echo Starting Ngrok Tunnel...
+start cmd /k "ngrok http 8000"
